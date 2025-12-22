@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Login - AI Tool Portal{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="login-container">
+    <h2>Welcome Back</h2>
+    <form action="{{ url_for('login') }}" method="POST">
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+
+    <div class="footer-links">
+        <p>Don't have an account? <a href="#">Sign Up</a></p>
+        <p><a href="#">Forgot Password?</a></p>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+{% endblock %}

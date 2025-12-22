@@ -1,0 +1,17 @@
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glow-n8n:hover {
+    box-shadow: 0 0 20px rgba(234, 75, 113, 0.5);
+}
+
+.glow-sd:hover {
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
+}
+
+.glow-video:hover {
+    box-shadow: 0 0 20px rgba(52, 211, 153, 0.5);
+}

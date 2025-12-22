@@ -1,0 +1,141 @@
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glow-n8n:hover {
+    box-shadow: 0 0 20px rgba(234, 75, 113, 0.5);
+}
+
+.glow-sd:hover {
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
+}
+
+.glow-video:hover {
+    box-shadow: 0 0 20px rgba(52, 211, 153, 0.5);
+}
+
+/* Flash messages positioning */
+.flash-messages {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    max-width: 350px;
+}
+
+.flash-message {
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideIn 0.3s ease-out;
+}
+
+.flash-message .close-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+    line-height: 1;
+}
+
+.flash-message .close-btn:hover {
+    opacity: 0.7;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.alert {
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+/* Header navigation styles */
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Profile page form styling */
+.profile-form-group {
+    margin-bottom: 1rem;
+}
+
+.profile-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #d1d5db;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.profile-form-group input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    border-radius: 0.5rem;
+    color: white;
+    transition: all 0.2s;
+}
+
+.profile-form-group input:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: #3b82f6;
+    border-color: transparent;
+}
+
+.profile-info-card {
+    background-color: #374151;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.profile-info-value {
+    color: white;
+    font-family: monospace;
+    background-color: #1f2937;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    word-break: break-all;
+}
+
+@media (max-width: 768px) {
+    .header-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-nav .flex {
+        margin-top: 1rem;
+    }
+}
