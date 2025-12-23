@@ -126,3 +126,11 @@ Thumbs.db
 
 # Log files
 *.log
+
+# Generated images
+generated_images/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
