@@ -9,17 +9,35 @@ import json
 
 load_dotenv()
 
+prompt_text = "wide angle cinematic landscape, samurai battle, sword fight, cinematic battle shot, samurai holding katana, two samurai, insane lighting, high resolution, sunset lighting, sunset sky, sunset settings, under the cherry blossoms tree, epic stand off, high contrast, cinematic masterpiece, dramatic lighting, 8K wallpaper"
+
 
 payload = {
   "input": {
-    "prompt": "Haruno Sakura from Naruto, cinematic anime illustration, ultra-detailed, masterpiece, best quality, 4k resolution, vibrant yet balanced colors, soft sakura pink palette, dynamic pose, expressive emerald eyes, detailed hair strands, flowing movement, ninja outfit with fine fabric texture, dramatic lighting, soft rim light, shallow depth of field, anime key visual style, studio-quality illustration, sharp focus, clean lineart, high detail background, cherry blossom petals floating, emotional and powerful atmosphere",
-    "negative_prompt": "blurry, low quality, low resolution, pixelated, overexposed, underexposed, bad anatomy, bad hands, extra fingers, missing fingers, deformed face, distorted eyes, flat lighting, dull colors, oversaturated, jpeg artifacts, watermark, text, logo",
-    "width": 512,
-    "height": 512,
-    "steps": 30,
-    "sampler_name": "Euler a",
-    "cfg_scale": 9
-  }
+  "prompt": prompt_text,
+  "negative_prompt": "blurry, low quality, low resolution, pixelated, bad anatomy, bad hands, extra fingers, missing fingers, deformed face, distorted eyes, watermark, text, logo, (worst quality, low quality:2), monochrome, zombie, distorted, out of frame, cropped, duplicate, split image, double landscape",
+  "seed": -1,
+  "subseed": -1,
+  "subseed_strength": 0,
+  "batch_size": 1,
+  "n_iter": 1,
+  "steps": 35,
+  "cfg_scale": 7,
+  "width": 1344, 
+  "height": 768,
+  "sampler_name": "DPM++ 2M",
+  "restore_faces": False,
+  "tiling": False,
+  "do_not_save_samples": False,
+  "do_not_save_grid": False,
+  "enable_hr": True,
+  "hr_scale": 1.5,
+  "hr_upscaler": "R-ESRGAN 4x+",
+  "hr_second_pass_steps": 15,
+  "hr_resize_x": 0,
+  "hr_resize_y": 0,
+  "denoising_strength": 0.4
+}
 }
 
 runpod.api_key = os.getenv("API_KEY")
